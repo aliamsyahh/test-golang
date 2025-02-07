@@ -5,17 +5,15 @@ import (
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
-	"golang.org/x/oauth2"
-	"golang.org/x/oauth2/google"
 )
 
-var GoogleOauthConfig = &oauth2.Config{
-	// ClientID:     "",
-	// ClientSecret: "",
-	RedirectURL: "http://localhost:8080/auth/google/callback",
-	Scopes:      []string{"email", "profile"},
-	Endpoint:    google.Endpoint,
-}
+// var GoogleOauthConfig = &oauth2.Config{
+// 	ClientID:     "",
+// 	ClientSecret: "",
+// 	RedirectURL:  "http://localhost:8080/auth/google/callback",
+// 	Scopes:       []string{"email", "profile"},
+// 	Endpoint:     google.Endpoint,
+// }
 
 var JwtSecret = []byte(os.Getenv("JWT_SECRET"))
 
