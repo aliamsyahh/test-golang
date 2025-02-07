@@ -10,11 +10,11 @@ import (
 )
 
 var GoogleOauthConfig = &oauth2.Config{
-	ClientID:     "",
-	ClientSecret: "",
-	RedirectURL:  "http://localhost:8080/auth/google/callback",
-	Scopes:       []string{"email", "profile"},
-	Endpoint:     google.Endpoint,
+	// ClientID:     "",
+	// ClientSecret: "",
+	RedirectURL: "http://localhost:8080/auth/google/callback",
+	Scopes:      []string{"email", "profile"},
+	Endpoint:    google.Endpoint,
 }
 
 var JwtSecret = []byte(os.Getenv("JWT_SECRET"))
